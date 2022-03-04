@@ -1,0 +1,64 @@
+.container {
+    background-color: #931909f5;
+}
+
+p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+.outer-box {
+    width: 24%;
+    height: 90%;
+    margin-left: 38%;
+    border-radius: 20px;
+    background-color: white;
+
+}
+
+.heading {
+    background-color: #fa0909;
+    border-radius: 20px 20px 0px 0px;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+ .bill_amount {
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+.label-design {
+    padding-top: 20px;
+}
+
+.service_standard {
+    height: 50px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.calculate-btn-div {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.calculate-btn {
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #fa0909;
+    color: white;
+    border-radius: 10px;
+}
+
+.tip_amount {
+    font-size: 25px;
+    font-weight: 600;
+}

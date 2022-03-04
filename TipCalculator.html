@@ -1,0 +1,57 @@
+<html>
+    <head>
+        
+        <title>TIP CALCULATOR</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script>
+            function calculateTipAmount() {
+                let billAmount = document.getElementById('bill_amount').value;
+                let serviceStandard = document.getElementById('service_standard').value;
+                let peopleNum = document.getElementById('people').value;
+                if (billAmount == "" || serviceStandard == "" || peopleNum == "") {
+                    return alert('Please fill all the fields');
+                }
+                document.getElementById('tip_per_person').innerText = parseFloat(((billAmount * serviceStandard)/100)/peopleNum).toFixed(2);
+            }
+        </script>
+    </head>
+    <body class="container">
+        <div class="outer-box">
+            <div class="heading">
+                <p>TIP CALCULATOR</p>                
+            </div>
+
+            <div class="bill_amount">
+                <div class="label-design">
+                    <label>How much was your bill? *</label>
+                    <br/><br/>
+                    <span>$</span>
+                    <input type="number" name="bill_amount" id="bill_amount"/>
+                </div>
+                <div class="label-design">    
+                    <label>How was your service? *</label><br/><br/>
+                    <select class="service_standard" name="service_standard" id="service_standard" value="">
+                        <option value="">Select Service Standard</option>
+                        <option value="0">Poor 0%</option>
+                        <option value="10">Good 10%</option>
+                        <option value="20">Better 20%</option>
+                        <option value="30">Outstanding 30%</option>
+                    </select>
+                </div>
+                <div class="label-design">
+                    <label>How many people are sharing the bill ? *</label>
+                    <br/><br/>
+                    <input type="number" name="people" id="people"/><span> people</span>
+                </div>
+                <div class="calculate-btn-div">
+                    <input onclick="calculateTipAmount()" class="calculate-btn" type="button" value="CALCULATE" type="submit"/>
+                </div>
+                <div class="calculate-btn-div">
+                    <p class="tip_amount">TIP AMOUNT</p>
+                    <p class="tip_amount"><span> $ </span><span id="tip_per_person">0.00</span></p>
+                    <p class="tip_amount">each</p>
+                </div>
+            </div>            
+        </div>    
+    </body>
+</html>
